@@ -1,0 +1,56 @@
+! -----------------------------------------------
+! shomshing theme
+! file:     ~/.Xresources
+! author:   Aaron "ninjaaron" Christianson
+! modified: Tue Dec 18 12:35:56 CST 2012
+! -----------------------------------------------
+
+! colors
+URxvt.transparent: true
+URxvt.shading: 12
+URxvt.depth: 32
+URxvt.background: #000000
+URxvt.foreground: #777777
+XTerm*background: #000000
+XTerm*foreground: #777777
+*background: #262626
+*foreground: #A8A8A8
+*color0: #1d0420
+*color1: #a03f63
+*color2: #a0494d
+*color3: #52a082
+*color4: #a07b5c
+*color5: #bf614e
+*color6: #6bb283
+*color7: #d28a57
+*color8: #a8a871
+*color9: #d0ad6f
+*color10: #93d39c
+*color11: #e0a562
+*color12: #c5d595
+*color13: #abe0a2
+*color14: #e0bf7e
+*color15: #e0d89a
+
+! font
+URxvt.font: xft:DejaVuSansMono:pixelsize=13
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.dpi: 96
+
+! scrollbar
+URxvt.scrollstyle: rxvt
+URxvt.scrollBar: off
+
+URxvt*termName: rxvt
+URxvt*internalBorder: 0
+
+! urls
+URxvt.perl-ext-common: default,url-select,clipboard
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/firefox
+URxvt.url-select.underline: true

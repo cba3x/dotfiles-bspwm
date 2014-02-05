@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-A collection of Linux configuration dotfiles with install scripts for various setups including bspwm
+A collection of Linux configuration dotfiles for bspwm/sxhkd/SLiM with an install script

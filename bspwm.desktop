@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=bspwm
+Comments=binary space partitioning tiling window manager
+Exec=bspwm
+Type=Application

@@ -1,0 +1,23 @@
+out_to_x no
+own_window no
+out_to_console yes
+double_buffer no
+background no
+max_text_width 0
+
+# Update interval in seconds; I prefer 30 for laptops
+update_interval 3.0
+
+total_run_times 0
+short_units yes
+override_utf8_locale no
+cpu_avg_samples 2
+if_up_strictness address
+
+# Laptop style; xbacklight is from xorg-xbacklight, current-forecast-$USER is from my conky_wunderground_scripts repo
+# TEXT
+# SL) ${exec printf "%.0f" $(xbacklight -get)}% | B) ${battery_percent}% ${battery_time} | T) ${acpitemp}°C | C) $loadavg | M) $memperc%${if_up enp0s25} | W) ${exec cat /tmp/current-forecast-$USER}${endif}${if_up wlp3s0} | W) ${exec cat /tmp/current-forecast-$USER}${endif} | ${time %F %l.%M}
+
+# Desktop style; nvidia-smi is part of the nvidia proprietary drivers, sensors is from lm_sensors and is used to get temps for multiple cores, and current-forecast-$USER is from my conky_wunderground_scripts repo
+TEXT
+ST) ${exec echo $(sensors | grep Core | awk '{print $3}' | cut -b 2-3)} | G) ${exec nvidia-smi -q -d temperature | grep Gpu | awk '{print $3}'} | C) $loadavg | M) $memperc%${if_up enp3s0} | W) ${exec cat /tmp/current-forecast-$USER}${endif} | ${time %F %l.%M}

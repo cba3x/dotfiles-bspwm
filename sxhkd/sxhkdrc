@@ -1,0 +1,112 @@
+#
+# bspwm hotkeys
+#
+
+super + shift + e
+    bspc quit
+
+super + shift + q
+    bspc window -c
+
+super + e
+    bspc desktop -l next
+
+super + b
+    bspc desktop -B
+
+super + {space,shift + f}
+    bspc window -t {floating,fullscreen}
+
+super + Tab
+    bspc monitor -f next
+
+super + grave
+    bspc window -f last
+
+super + {o,i}
+    bspc control --record-history off; \
+    bspc window {older,newer} -f; \
+    bspc control --record-history on
+
+super + y
+    bspc window -w last.manual
+
+super + m
+    bspc window -s biggest
+
+super + {_,shift + }{h,j,k,l}
+    bspc window -{f,s} {left,down,up,right}
+
+alt + {_,shift + }Tab
+    bspc window -f {next,prev}
+
+super + {_,shift + }r
+    bspc desktop -R {90,-90}
+
+super + {comma,period}
+    bspc desktop -C {backward,forward}
+
+super + bracket{left,right}
+    bspc desktop -f {prev,next}
+
+super + ctrl + {h,j,k,l}
+    bspc window -p {left,down,up,right}
+
+#super + ctrl + {_,shift + }space
+#    bspc {window -p cancel,desktop -c}
+
+super + alt + {h,j,k,l}
+    bspc window -e {left,down,up,right} push
+
+super + alt + shift + {h,j,k,l}
+    bspc window -e {right,up,down,left} pull
+
+super + ctrl + {1-9}
+    bspc window -r 0.{1-9}
+
+super + {_,shift + }{1-9}
+    bspc {desktop -f,window -d} {1-9}
+
+super + KP_{End,Down,Next,Left,Begin,Right,Home,Up}
+    bspc desktop -f {1,2,3,4,5,6,7,8}
+
+~button1
+    bspc pointer -g focus
+
+super + button{1-3}
+    bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+    bspc pointer -t %i %i
+
+super + button{4-5}
+    bspc desktop -f {next,prev}
+
+#
+# wm independent hotkeys
+#
+
+super + Return
+    urxvtc
+
+super + d
+    dmenu_run
+
+super + f
+    export EDITOR=vim && urxvtc -e ranger
+
+super + c
+    firefox
+
+super + t
+    subl
+
+super + x
+    xset dpms force off; DISPLAY=:0.0 /usr/bin/slimlock
+
+Print
+    scrot -q 100 "/tmp/screenshot_"$(date +%s)".jpg"
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
