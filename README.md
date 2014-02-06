@@ -1,4 +1,4 @@
-# bspwm\-git
+# dotfiles\-bspwm
 
 ![The setup](http://i.imgur.com/5zbotPc.jpg)
 
