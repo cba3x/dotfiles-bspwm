@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ">>> Beginning config"
-echo ">>> The default config was designed around a dual 1920x1080 monitor setup; several lines are commented throughout various files that are friendlier for a 1440x900 laptop"
+echo ">>> The default config was designed around a dual 1920x1080 monitor setup; several lines are commented throughout various files that are friendlier for a 1600x900 laptop"
 echo ">>> See https://github.com/iwvelando/dotfiles-bspwm for details on the relevant lines"
 
 thisDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
