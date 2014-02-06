@@ -38,6 +38,7 @@ ln -sv "$thisDir/bspwm/.Xresources" "$HOME/.Xresources"
 [ ! -f "$binDir/rulc" ] && ln -sv "$thisDir/bin/rulc" "$binDir/rulc"
 [ ! -f "$binDir/ruld" ] && ln -sv "$thisDir/bin/ruld" "$binDir/ruld"
 [ ! -f "$binDir/rule_command" ] && ln -sv "$thisDir/bin/rule_command" "$binDir/rule_command"
+[ ! -f "$binDir/wclass" ] && ln -sv "$thisDir/bin/wclass" "$binDir/wclass"
 
 echo ">>> Execute the following command as root to add the bspwm entry to your display manager provided it searches /usr/share/xsessions"
 echo
