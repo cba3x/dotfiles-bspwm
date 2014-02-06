@@ -1,0 +1,5 @@
+#!/bin/bash
+# Outputs the window class for a selected window for use in bspwm's rules
+
+winid=$(xwininfo | grep "Window id:" | awk '{print $4}')
+xwinfo -cints $winid | sed -n '1p'
