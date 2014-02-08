@@ -10,11 +10,11 @@ bspwm)
 #	synclient VertEdgeScroll=1
 	xsetroot -cursor_name left_ptr
 	xrdb $HOME/.Xresources
-	xset r rate 250 30
-	xset +fp /usr/share/fonts/local
-	xset fp rehash
-	xset s off off
-	xset dpms 1200 1800 2400
+	#xset r rate 250 30
+	#xset +fp /usr/share/fonts/local
+	#xset fp rehash
+	#xset s off off
+	#xset dpms 1200 1800 2400
 #	Laptop settings:
 #	xset dpms 300 300 300
 
